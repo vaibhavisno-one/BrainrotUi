@@ -63,7 +63,7 @@ export function Header() {
                    <Flame className="w-6 h-6 text-green-500 dark:text-green-400" />
                    
                     <span className="hidden sm:block font-semibold">
-                      CodeSnippetUI
+                      BrainrotUi
                     </span>
                   </Link>
                   <span className="text-zinc-300 dark:text-zinc-700">|</span>
@@ -115,7 +115,7 @@ export function Header() {
                   >
                     Pricing
                   </ViewTransitionsLink>
-                  {/* <ThemeToggle /> */}
+                  
                 </div>
               </div>
             </div>

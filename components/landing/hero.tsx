@@ -3,7 +3,7 @@
 import type React from "react";
 
 import Link from "next/link";
-import TailwindCSS from "@/components/icons/tailwindcss";
+import TailwindCSS from "@/components/icons/tailwind-css";
 import { motion } from "motion/react";
 
 import {
@@ -17,17 +17,17 @@ import {
   Code,
   Layers,
 } from "lucide-react";
-import { Btn14 } from "../codesnippetui/button/btn-14";
-import Btn03 from "../codesnippetui/button/btn-03";
-import Input09 from "../codesnippetui/input/input-09";
-import AIInput_04 from "../codesnippetui/ai-input/ai-input-04";
+import { Btn14 } from "../brainrotui/button/btn-14";
+import Btn03 from "../brainrotui/button/btn-03";
+// import Input09 from "../brainrotui/input/input-09";
+import AIInput_04 from "../brainrotui/ai-input/ai-input-04";
 
-import Card08 from "../codesnippetui/card/card-08";
+import Card08 from "../brainrotui/card/card-08";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
 import { BrowseComponentsButton } from "../ui/browse-button";
-import Features from "./feature-block";
+// import Features from "./feature-block";
 
-import Card02 from "../codesnippetui/card/card-02";
+import Card02 from "../brainrotui/card/card-02";
 
 interface Action {
   id: string;
@@ -51,26 +51,26 @@ export function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100">
-            Craft with{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-500 dark:from-rose-400 dark:via-fuchsia-400 dark:to-purple-400">
+            Built with{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-gray-500 to-neutral-500 dark:from-blue-400 dark:via-gray-400 dark:to-neutral-400">
               precision
             </span>
             <br />
-            build with{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-fuchsia-500 to-rose-500 dark:from-purple-400 dark:via-fuchsia-400 dark:to-rose-400">
+             to build with{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-500 via-gray-500 to-blue-500 dark:from-neutral-400 dark:via-gray-400 dark:to-blue-400">
               ease
             </span>
             .
           </h1>
           <p className="mt-6 text-base md:text-xl text-zinc-700 dark:text-zinc-300 max-w-lg">
-            A curated collection of{" "}
-            <span className="font-semibold">100+ premium UI components</span>{" "}
+            A collection of{" "}
+            <span className="font-semibold"> premium UI components</span>{" "}
             crafted with{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-fuchsia-500 dark:from-rose-400 dark:to-fuchsia-400">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-500 dark:from-blue-400 dark:to-neutral-400">
               Tailwind CSS
             </span>{" "}
             and{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-purple-500 dark:from-fuchsia-400 dark:to-purple-400">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-gray-500 dark:from-blue-400 dark:to-neutral-400">
               shadcn/ui
             </span>{" "}
             for modern React and Next.js applications.
@@ -99,7 +99,7 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        <Features />
+        {/* <Features /> */}
       </div>
 
       {/* Right side - Components Layout */}
@@ -113,9 +113,7 @@ export function HeroSection() {
         >
           {/* Card component */}
           <div className="w-full flex flex-col items-center justify-center ">
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              {"<Card/>"}
-            </span>
+            
             <Card08 href="/docs/components/card" />
           </div>
 
@@ -128,7 +126,7 @@ export function HeroSection() {
                             actions={allActions}
                             defaultOpen={true}
                         /> */}
-            <Card02 />
+            {/* <Card02 /> */}
           </div>
         </motion.div>
 
@@ -139,10 +137,6 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="w-full"
         >
-          <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-            AI Chat
-          </span>
-          {/* <AIInput_04 /> */}
           <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
             <AIInput_04 />
           </div>
@@ -157,9 +151,7 @@ export function HeroSection() {
         >
           {/* Left side - Buttons */}
           <div className="w-full">
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              Buttons
-            </span>
+            
             <div className="w-full h-48 rounded-xl  border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center gap-3">
               <Link href="/docs/components/button">
                 <Btn14 label="Bring me" className=" w-42 py-5" />
@@ -176,7 +168,7 @@ export function HeroSection() {
               Input
             </span>
             <Link href="/docs/components/input">
-              <Input09 />
+              {/* <Input09 /> */}
             </Link>
           </div>
         </motion.div>
