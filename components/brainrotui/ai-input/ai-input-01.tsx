@@ -22,7 +22,7 @@ export default function AIInput_01() {
     <div className="w-full py-4">
       <div className="relative max-w-xl w-full mx-auto">
         <Textarea
-          id="ai-input-01"
+          id="ai-input-01" //documentation ke time pae kaam ayegi
           placeholder="Type your message..."
           className={cn(
             "max-w-xl bg-black/5 dark:bg-white/5 rounded-3xl pl-6 pr-16",

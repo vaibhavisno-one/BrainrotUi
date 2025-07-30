@@ -1,161 +1,74 @@
-"use client";
-
-import {
-    Text,
-    CheckCheck,
-    ArrowDownWideNarrow,
-    CornerRightDown,
-} from "lucide-react";
-import { useState } from "react";
-import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
-import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea";
-
-const ITEMS = [
-    {
-        text: "Summary",
-        icon: Text,
-        colors: {
-            icon: "text-orange-600",
-            border: "border-orange-500",
-            bg: "bg-orange-100",
-        },
-    },
-    {
-        text: "Fix Spelling and Grammar",
-        icon: CheckCheck,
-        colors: {
-            icon: "text-emerald-600",
-            border: "border-emerald-500",
-            bg: "bg-emerald-100",
-        },
-    },
-    {
-        text: "Make shorter",
-        icon: ArrowDownWideNarrow,
-        colors: {
-            icon: "text-purple-600",
-            border: "border-purple-500",
-            bg: "bg-purple-100",
-        },
-    },
-];
+"use client"
+import { ArrowUp, Mic, Paperclip } from "lucide-react"
+import { useState } from "react"
+import { cn } from "@/lib/utils"
+import { Textarea } from "@/components/ui/textarea"
+import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea"
 
 export default function AIInput_03() {
-    const [inputValue, setInputValue] = useState("");
-    const [selectedItem, setSelectedItem] = useState<string | null>(
-        "Make shorter"
-    );
-    const { textareaRef, adjustHeight } = useAutoResizeTextarea({
-        minHeight: 52,
-        maxHeight: 200,
-    });
+  const { textareaRef, adjustHeight } = useAutoResizeTextarea({
+    minHeight: 56,
+    maxHeight: 220,
+  })
+  const [inputValue, setInputValue] = useState("")
 
-    const toggleItem = (itemText: string) => {
-        setSelectedItem((prev) => (prev === itemText ? null : itemText));
-    };
+  const handleSubmit = () => {
+    if (!inputValue.trim()) return
+    setInputValue("")
+    adjustHeight(true)
+  }
 
-    const currentItem = selectedItem
-        ? ITEMS.find((item) => item.text === selectedItem)
-        : null;
-
-    const handleSubmit = () => {
-        setInputValue("");
-        setSelectedItem(null);
-        adjustHeight(true);
-    };
-
-    return (
-        <div className="w-full py-4">
-            <div className="relative max-w-xl w-full mx-auto">
-                <div className="relative border border-black/10 dark:border-white/10 focus-within:border-black/20 dark:focus-within:border-white/20 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03]">
-                    <div className="flex flex-col">
-                        <div className="overflow-y-auto max-h-[200px]">
-                            <Textarea
-                                ref={textareaRef}
-                                id="ai-input-03"
-                                placeholder="Enter your text here..."
-                                className={cn(
-                                    "max-w-xl w-full rounded-2xl pr-10 pt-3 pb-3 placeholder:text-black/70 dark:placeholder:text-white/70 border-none focus:ring-3 text-black dark:text-white resize-none text-wrap bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 leading-[1.2]",
-                                    "min-h-[52px]",
-                                    "max-h-[200px]"
-                                )}
-                                value={inputValue}
-                                onChange={(e) => {
-                                    setInputValue(e.target.value);
-                                    adjustHeight();
-                                }}
-                                onKeyDown={(e) => {
-                                    if (e.key === "Enter" && !e.shiftKey) {
-                                        e.preventDefault();
-                                        handleSubmit();
-                                    }
-                                }}
-                            />
-                        </div>
-
-                        <div className="h-12 bg-transparent">
-                            {currentItem && (
-                                <div className="absolute left-3 bottom-3 z-10">
-                                    <button
-                                        type="button"
-                                        onClick={handleSubmit}
-                                        className={cn(
-                                            "inline-flex items-center gap-1.5",
-                                            "border shadow-xs rounded-md px-2 py-0.5 text-xs font-medium",
-                                            "animate-fadeIn hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200",
-                                            currentItem.colors.bg,
-                                            currentItem.colors.border
-                                        )}
-                                    >
-                                        <currentItem.icon
-                                            className={`w-3.5 h-3.5 ${currentItem.colors.icon}`}
-                                        />
-                                        <span
-                                            className={currentItem.colors.icon}
-                                        >
-                                            {selectedItem}
-                                        </span>
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-
-                    <CornerRightDown
-                        className={cn(
-                            "absolute right-3 top-3 w-4 h-4 transition-all duration-200 dark:text-white",
-                            inputValue
-                                ? "opacity-100 scale-100"
-                                : "opacity-30 scale-95"
-                        )}
-                    />
-                </div>
-            </div>
-            <div className="flex flex-wrap gap-1.5 mt-2 max-w-xl mx-auto justify-start px-4">
-                {ITEMS.filter((item) => item.text !== selectedItem).map(
-                    ({ text, icon: Icon, colors }) => (
-                        <button
-                            type="button"
-                            key={text}
-                            className={cn(
-                                "px-3 py-1.5 text-xs font-medium rounded-full",
-                                "border transition-all duration-200",
-                                "border-black/10 dark:border-white/10 bg-white dark:bg-gray-900 hover:bg-black/5 dark:hover:bg-white/5",
-                                "shrink-0"
-                            )}
-                            onClick={() => toggleItem(text)}
-                        >
-                            <div className="flex items-center gap-1.5">
-                                <Icon className={cn("h-4 w-4", colors.icon)} />
-                                <span className="text-black/70 dark:text-white/70 whitespace-nowrap">
-                                    {text}
-                                </span>
-                            </div>
-                        </button>
-                    )
-                )}
-            </div>
+  return (
+    <div className="w-full py-6">
+      <div className="relative max-w-3xl w-full mx-auto">
+        <div className="relative backdrop-blur-xl bg-white/10 dark:bg-black/10 rounded-2xl border border-white/20 dark:border-white/10 shadow-2xl">
+          <Textarea
+            placeholder="What's on your mind?"
+            className={cn(
+              "w-full bg-transparent rounded-2xl pl-6 pr-24",
+              "placeholder:text-white/60 dark:placeholder:text-white/40",
+              "border-none text-white dark:text-white",
+              "overflow-y-auto resize-none",
+              "focus-visible:ring-0 focus-visible:ring-offset-0",
+              "transition-all duration-200 ease-out",
+              "leading-[1.3] py-4",
+              "min-h-[56px] max-h-[220px]",
+            )}
+            ref={textareaRef}
+            value={inputValue}
+            onChange={(e) => {
+              setInputValue(e.target.value)
+              adjustHeight()
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault()
+                handleSubmit()
+              }
+            }}
+          />
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+            <button className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+              <Paperclip className="w-4 h-4 text-white/70" />
+            </button>
+            <button className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+              <Mic className="w-4 h-4 text-white/70" />
+            </button>
+            <button
+              onClick={handleSubmit}
+              disabled={!inputValue.trim()}
+              className={cn(
+                "p-2 rounded-lg transition-all duration-200",
+                inputValue.trim()
+                  ? "bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white shadow-lg"
+                  : "bg-white/10 text-white/40 cursor-not-allowed",
+              )}
+            >
+              <ArrowUp className="w-4 h-4" />
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  )
 }
