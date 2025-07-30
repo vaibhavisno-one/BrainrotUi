@@ -23,6 +23,10 @@ export default function Home() {
           
             {/* <TechnologyBadges/> */}
             {/* <EventToast /> */}
+
+            <div className="flex flex-col justify-center gap-10">
+               
+            </div>
         </main>
     );
 }

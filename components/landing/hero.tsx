@@ -17,17 +17,17 @@ import {
   Code,
   Layers,
 } from "lucide-react";
-// import { Btn14 } from "../brainrotui/button/btn-14";
-// import Btn03 from "../brainrotui/button/btn-03";
-// import Input09 from "../brainrotui/input/input-09";
-// import AIInput_04 from "../brainrotui/ai-input/ai-input-04";
+import { Btn14 } from "../brainrotui/button/btn-14";
+import Btn03 from "../brainrotui/button/btn-03";
+import Input09 from "../brainrotui/input/input-09";
+import AIInput_04 from "../brainrotui/ai-input/ai-input-04";
 
-// import Card08 from "../brainrotui/card/card-08";
+import Card08 from "../brainrotui/card/card-08";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
 import { BrowseComponentsButton } from "../ui/browse-button";
 import Features from "./features";
 
-// import Card02 from "../brainrotui/card/card-02";
+import Card02 from "../brainrotui/card/card-02";
 
 interface Action {
   id: string;
@@ -114,7 +114,7 @@ export function HeroSection() {
           {/* Card component */}
           <div className="w-full flex flex-col items-center justify-center ">
             
-            {/* <Card08 href="/docs/components/card" /> */}
+            <Card08 href="/docs/components/card" />
           </div>
 
           {/* Action Search Bar */}
@@ -124,7 +124,7 @@ export function HeroSection() {
                             actions={allActions}
                             defaultOpen={true}
                         /> */}
-            {/* <Card02 /> */}
+            <Card02 />
           </div>
         </motion.div>
 
@@ -136,7 +136,7 @@ export function HeroSection() {
           className="w-full"
         >
           <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
-            {/* <AIInput_04 /> */}
+            <AIInput_04 />
           </div>
         </motion.div>
 
@@ -152,10 +152,10 @@ export function HeroSection() {
             
             <div className="w-full h-48 rounded-xl  border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center gap-3">
               <Link href="/docs/components/button">
-                {/* <Btn14 label="Bring me" className=" w-42 py-5" /> */}
+                <Btn14 label="Bring me" className=" w-42 py-5" />
               </Link>
               <Link href="/docs/components/button">
-                {/* <Btn03 className=" w-42 py-5" /> */}
+                <Btn03 className=" w-42 py-5" />
               </Link>
             </div>
           </div>
@@ -164,7 +164,7 @@ export function HeroSection() {
           <div className="w-full">
             
             <Link href="/docs/components/input">
-              {/* <Input09 /> */}
+              <Input09 />
             </Link>
           </div>
         </motion.div>

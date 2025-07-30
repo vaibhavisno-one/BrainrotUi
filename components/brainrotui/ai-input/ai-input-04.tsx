@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { Textarea } from "@/components/ui/textarea"
 import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea"
 
-export default function AIInput_04() {
+export default function AIInput04() {
   const { textareaRef, adjustHeight } = useAutoResizeTextarea({
     minHeight: 56,
     maxHeight: 220,
