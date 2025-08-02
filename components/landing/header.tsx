@@ -38,14 +38,14 @@ export function Header() {
                 <div className="grid grid-cols-2 gap-6 p-4 text-sm">
                   <ProductItem
                     title="Landing Starter"
-                    href="/templates/landing"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
+                    href=""
+                    src=""
                     description="Beautiful landing page template"
                   />
                   <ProductItem
                     title="Dashboard UI"
-                    href="/templates/dashboard"
-                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                    href=""
+                    src=""
                     description="Admin dashboard made with Tailwind"
                   />
                 </div>
