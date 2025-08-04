@@ -17,17 +17,18 @@ import {
   Code,
   Layers,
 } from "lucide-react";
-import { Btn14 } from "../brainrotui/button/btn-14";
-import Btn03 from "../brainrotui/button/btn-03";
-import Input09 from "../brainrotui/input/input-09";
-import AIInput_04 from "../brainrotui/ai-input/ai-input-04";
+import AIInput04 from "../brainrotui/ai-input/ai-input-04";
 
-import Card08 from "../brainrotui/card/card-08";
+import Card01 from "../brainrotui/card/card-08";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
 import { BrowseComponentsButton } from "../ui/browse-button";
 import Features from "./features";
 
 import Card02 from "../brainrotui/card/card-02";
+import Input03 from "../brainrotui/input/input-03";
+import Btn_01 from "../brainrotui/button/btn-01";
+import Input02 from "../brainrotui/input/input-02";
+
 
 interface Action {
   id: string;
@@ -114,7 +115,7 @@ export function HeroSection() {
           {/* Card component */}
           <div className="w-full flex flex-col items-center justify-center ">
             
-            <Card08 href="/docs/components/card" />
+            <Card01 href="#" />
           </div>
 
           {/* Action Search Bar */}
@@ -136,7 +137,7 @@ export function HeroSection() {
           className="w-full"
         >
           <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
-            <AIInput_04 />
+            <AIInput04 />
           </div>
         </motion.div>
 
@@ -151,11 +152,11 @@ export function HeroSection() {
           <div className="w-full">
             
             <div className="w-full h-48 rounded-xl  border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center gap-3">
-              <Link href="/docs/components/button">
-                <Btn14 label="Bring me" className=" w-42 py-5" />
+              <Link href="#">
+                <Input03/>
               </Link>
-              <Link href="/docs/components/button">
-                <Btn03 className=" w-42 py-5" />
+              <Link href="#" className="py-3">
+                <Btn_01/>
               </Link>
             </div>
           </div>
@@ -163,9 +164,9 @@ export function HeroSection() {
           {/* Right side - Input */}
           <div className="w-full">
             
-            <Link href="/docs/components/input">
-              <Input09 />
-            </Link>
+            
+              <Input02/>
+            
           </div>
         </motion.div>
       </div>

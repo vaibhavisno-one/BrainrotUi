@@ -14,7 +14,7 @@ interface Card08Props {
     href?: string;
 }
 
-export default function Card08({
+export default function Card01({
     title = "New UI Design Fundamentals",
     subtitle = "Explore the fundamentals of contemporary UI design",
     image = "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png",

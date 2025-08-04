@@ -17,7 +17,7 @@ interface Particle {
     y: number;
 }
 
-export default function Btn03({
+export default function Btn_01({
     className,
     particleCount = 12,
     attractRadius = 50,

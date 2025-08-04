@@ -1,5 +1,5 @@
 import { CheckCircle2, XCircle, AlertTriangle, Info, Bell, Zap, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+
 export default function Alert05() {
   return (
     <div className="w-full max-w-xl mx-auto">

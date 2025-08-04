@@ -30,7 +30,7 @@ const avatarUrls = [
     "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png",
 ] as const;
 
-export default function Input09() {
+export default function Input01() {
     const [peopleCount, setPeopleCount] = useState(1);
     const [isVibrating, setIsVibrating] = useState(false);
 

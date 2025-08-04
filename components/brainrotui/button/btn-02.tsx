@@ -7,7 +7,7 @@ interface Btn14Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
 }
 
-export function Btn14({ label = "Submit", className, ...props }: Btn14Props) {
+export function Btn_02({ label = "Submit", className, ...props }: Btn14Props) {
     return (
         <Button
             variant="ghost"
