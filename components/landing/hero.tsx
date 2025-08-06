@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import AIInput04 from "../brainrotui/ai-input/ai-input-04";
 
-import Card01 from "../brainrotui/card/card-08";
+import Card01 from "../brainrotui/card/card-01";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
 import { BrowseComponentsButton } from "../ui/browse-button";
 import Features from "./features";
@@ -152,9 +152,9 @@ export function HeroSection() {
           <div className="w-full">
             
             <div className="w-full h-48 rounded-xl  border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center gap-3">
-              <Link href="#">
+              
                 <Input03/>
-              </Link>
+              
               <Link href="#" className="py-3">
                 <Btn_01/>
               </Link>

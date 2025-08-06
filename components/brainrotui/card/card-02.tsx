@@ -18,10 +18,10 @@ interface Card02Props {
 }
 
 const defaultProfile = {
-    name: "Eugene K",
-    role: "Senior Developer",
-    image: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",
-    status: "Open to Work",
+    name: "Tyler Durden",
+    role: "Founder of  ",
+    image: "/Card-02.png",
+    status: "Leader",
     skills: [
         { name: "Frontend", level: 5 },
         { name: "Backend", level: 4 },
