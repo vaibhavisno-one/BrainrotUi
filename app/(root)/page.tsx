@@ -1,4 +1,4 @@
-// import EventToast from "@/components/event-toast";
+import EventToast from "@/components/event-toast";
 // import { ComponentShowcaseCard } from "@/components/landing/component-showcase-card";
 import { HeroSection } from "@/components/landing/hero";
 // import { InteractivePreview } from "@/components/landing/interactive-preview";
@@ -22,10 +22,10 @@ export default function Home() {
             /> */}
           
             {/* <TechnologyBadges/> */}
-            {/* <EventToast /> */}
+            <EventToast />
 
-            <div className="flex flex-col justify-center gap-10">
-               
+            <div className="flex  justify-center gap-10">
+                
             </div>
         </main>
     );

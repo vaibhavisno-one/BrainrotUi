@@ -57,7 +57,7 @@ export function HeroSection() {
               precision
             </span>
             <br />
-             to build with{" "}
+            to build with{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-neutral-500 via-gray-500 to-blue-500 dark:from-neutral-400 dark:via-gray-400 dark:to-blue-400">
               ease
             </span>
@@ -114,13 +114,13 @@ export function HeroSection() {
         >
           {/* Card component */}
           <div className="w-full flex flex-col items-center justify-center ">
-            
+
             <Card01 href="#" />
           </div>
 
           {/* Action Search Bar */}
           <div className="w-full max-w-[600px] bg-transparent">
-            
+
             {/* <ActionSearchBar
                             actions={allActions}
                             defaultOpen={true}
@@ -136,7 +136,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="w-full"
         >
-          <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
+          <div className="w-full h-auto px-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
             <AIInput04 />
           </div>
         </motion.div>
@@ -150,23 +150,23 @@ export function HeroSection() {
         >
           {/* Left side - Buttons */}
           <div className="w-full">
-            
+
             <div className="w-full h-48 rounded-xl  border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center gap-3">
-              
-                <Input03/>
-              
+
+              <Input03 />
+
               <Link href="#" className="py-3">
-                <Btn_01/>
+                <Btn_01 />
               </Link>
             </div>
           </div>
 
           {/* Right side - Input */}
-          <div className="w-full">
-            
-            
-              <Input02/>
-            
+          <div className="w-full h-auto px-4 py-3.5 rounded-xl  border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center gap-3">
+
+
+            <Input02 />
+
           </div>
         </motion.div>
       </div>
