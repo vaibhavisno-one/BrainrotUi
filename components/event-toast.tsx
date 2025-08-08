@@ -105,7 +105,7 @@ interface ToastProps {
 
 export const EventToaster = () => {
     useEffect(() => {
-        // Add a 1-second delay before showing the toast
+        // Add a 1-second delay 
         const timeoutId = setTimeout(() => {
             toast({
                 title: "Arca.directory",

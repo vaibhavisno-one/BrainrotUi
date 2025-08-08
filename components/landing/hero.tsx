@@ -28,6 +28,7 @@ import Card02 from "../brainrotui/card/card-02";
 import Input03 from "../brainrotui/input/input-03";
 import Btn_01 from "../brainrotui/button/btn-01";
 import Input02 from "../brainrotui/input/input-02";
+import MacBookCodeBlog from "../brainrotui/codeblog/macbook";
 
 
 interface Action {
@@ -170,6 +171,8 @@ export function HeroSection() {
           </div>
         </motion.div>
       </div>
+
+      
     </div>
   );
 }
