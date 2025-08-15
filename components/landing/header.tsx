@@ -37,16 +37,16 @@ export function Header() {
               <MenuItem setActive={setActive} active={active} item="Templates">
                 <div className="grid grid-cols-2 gap-6 p-4 text-sm">
                   <ProductItem
-                    title="Landing Starter"
-                    href=""
-                    src=""
-                    description="Beautiful landing page template"
+                    title="AlphaQuery"
+                    href="https://alpha-query.vercel.app/"
+                    src="/AlphaQuery.png"
+                    description="Your one stop solution for every problem"
                   />
                   <ProductItem
-                    title="Dashboard UI"
-                    href=""
-                    src=""
-                    description="Admin dashboard made with Tailwind"
+                    title="ProjGen"
+                    href="https://www.npmjs.com/package/projgen-cli"
+                    src="/Projgen.png"
+                    description="The User friendly project organisation tool"
                   />
                 </div>
               </MenuItem>
